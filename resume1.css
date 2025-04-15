@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --primary-color: #2A5C82;
+    --secondary-color: #5BA4E6;
+    --tertiary-color: white;
+}
+
+body {
+    background: white;
+}
+
+.resume-card {
+    background: white;
+    /* border-radius: 15px; */
+}
+
+.header-section {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+}
+
+.skill-badge {
+    background: #e3f2fd;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.section-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.download-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+.btn-download {
+    height: 60px;
+    border: 3px solid var(--tertiary-color) !important;
+    background: var(--tertiary-color) !important;
+    color: var(--primary-color) !important;
+    transition: all 0.7s ease;
+  
+}
+.btn-download:hover {
+    background: transparent !important;
+    border: 3px solid var(--tertiary-color);
+    color: var(--tertiary-color) !important;
+}
+
+@media print {
+    body {
+      -webkit-print-color-adjust: exact; /* Ensures background colors are printed */
+      print-color-adjust: exact;
+    }
+  
+    .resume-card {
+      width: 210mm;
+      height: 297mm;
+      box-sizing: border-box;
+      overflow: hidden !important;
+      page-break-inside: avoid;
+    }
+  
+    html, body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .download-btn,
+    #downloadBtn {
+      display: none !important;
+    }
+  }
+  
